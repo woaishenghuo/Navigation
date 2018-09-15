@@ -1,0 +1,105 @@
+body,div,ol,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,form,fieldset,legend,input{ 
+	margin:0; padding:0;
+}
+
+/*---百度搜索----------------------------------------*/
+.header{
+	width: 800px;
+	height: 190px;
+	position: relative;
+	margin: 0 auto;
+}
+.baidu_search{
+	width: 556px;
+	height: 40px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -278px;
+}
+.search_content{
+	width: 440px;
+	height: 20px;
+	font-size: 16px;
+	line-height: 26px;
+	padding:9px 7px;
+	outline: none;
+	border: 1px solid #b8b8b8;
+	border-radius: 1px;
+}
+.search_content:hover{
+	border: 1px solid #999;
+}
+.search_content:focus{
+	border: 1px solid #38f;
+}
+.search_submit{
+	width: 101px;
+	height: 40px;
+	background-color: #38f;
+	line-height: 39px;
+	font-size: 16px;
+	color: #fff;
+	border: 0;
+	padding: 0;
+	margin-left: -9px;
+}
+.search_submit:hover{
+	cursor: pointer;
+	background-color: #317ef3;
+	box-shadow: 1px 1px 1px #ccc;
+}
+
+/*---内容区域----------------------------------*/
+.content{
+	margin: 70px auto 0 auto;
+}
+.content .row{
+	width: 800px;
+	height: 107px;
+	margin: 8px auto;
+}
+ul{
+	list-style: none;
+}
+ul li a{
+	display: inline-block;
+	margin: 0 3px;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 7px;
+	box-shadow: 0 3px 12px rgba(0,0,0,0.2) inset;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+ul li a img{
+	width: 192px;
+	height: 105px;
+}
+/*ul li a:after{
+	display: inline-block;
+	content: url(images/jiantou.png);
+	position: absolute;
+	top: 0;
+	right: -20px;
+	opacity: 0;
+}
+ul li a:hover:after{
+	right: -7px;
+	opacity: 1;
+	transition: all 0.5s;
+}
+ul li a:hover img{
+	transform: translate(-10px);
+	transition: all 0.5s;
+}*/
+
+ul li a:hover{
+	box-shadow: 0 1px 2px 1px rgba(0,0,0,0.2);
+}
+
+/*鼠标放到li上以后，让图片的透明度变为0.95,大小变为原来的1.05倍*/
+ul li:hover a img{
+	opacity: 0.95;
+	transform: scale(1.05); 
+}

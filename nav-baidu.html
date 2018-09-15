@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的导航</title>
+	<link rel="stylesheet" type="text/css" href="nav.css">
+</head>
+<body>
+	
+	<!-- 百度搜索 -->
+	<div class="header">
+		<div class="baidu_search">
+			<form onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
+				<input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w">
+				<input class="search_content" type="text"  onfocus="checkHttps" name="word"  size="30" placeholder="在这里搜索">
+				<input class="search_submit" type="submit" value="百度一下">
+			</form>
+			<script src="http://s1.bdstatic.com/r/www/cache/global/js/BaiduHttps_20150714_zhanzhang.js"></script>
+			<script>
+				function checkHttps () {
+					BaiduHttps.useHttps();    
+				};
+				function baiduWithHttps (formname) {
+					var data = BaiduHttps.useHttps();
+					if (data.s === 0) {
+						return true;
+					}
+					else {
+						formname.action = 'https://www.baidu.com/baidu' + '?ssl_s=1&ssl_c' + data.ssl_code;
+						return true;
+					}
+				};
+			</script>
+		</div>
+	</div>
+	
+	
+	<div class="content">
+
+		<!-- 第一行 -->
+		<ul class="row">
+			<!-- 淘宝网 -->
+			<li>
+				<a href="https://www.taobao.com/" target="_blank">
+					<img src="images/taobao.png">
+				</a>
+			</li>
+			<!-- 爱奇艺 -->
+			<li>
+				<a href="http://www.iqiyi.com/" target="_blank">
+					<img src="images/iqiyi.jpg">
+				</a>
+			</li>
+			<!-- 百度文库 -->
+			<li>
+				<a href="http://wenku.baidu.com/" target="_blank">
+					<img src="images/baiduwenku.jpg">
+				</a>
+			</li>
+			<!-- 智学网 -->
+			<li>
+				<a href="http://www.zhixue.com/" target="_blank">
+					<img src="images/zhixuewang.png">
+				</a>
+			</li>		
+		</ul>
+
+		<!-- 第二行 -->
+		<ul class="row">
+			<!-- 中国大学MOOC -->
+			<li>
+				<a href="http://www.icourse163.org/" target="_blank">
+					<img src="images/中国大学mooc.jpg">
+				</a>
+			</li>
+			<!-- 网易云课堂 -->
+			<li>
+				<a href="http://study.163.com/" target="_blank">
+					<img src="images/wangyiyunketang.png">
+				</a>
+			</li>
+			<!-- 慕课网 -->
+			<li>
+				<a href="http://www.imooc.com/" target="_blank">
+					<img src="images/imooc.jpg">
+				</a>
+			</li>
+			<!-- W3Cschool -->
+			<li>
+				<a href="http://www.w3cschool.cn/" target="_blank">
+					<img src="images/w3cschool.png">
+				</a>				
+			</li>
+		</ul>
+
+		<!-- 第三行 -->
+		<ul class="row">
+			<!-- 麦街网 -->
+			<li>
+				<a href="http://bbs.mapgin.com/forum.php" target="_blank">
+					<img src="images/mapgin.png">
+				</a>
+			</li>
+			<!-- 廖雪峰的python3教程 -->
+			<li>
+				<a href="http://www.icourses.cn/mooc/" target="_blank">
+					<img src="images/icourse.jpg">
+				</a>
+			</li>
+			<!-- 我要自学网 -->
+			<li>
+				<a href="http://www.51zxw.net/" target="_blank">
+					<img src="images/51zxw.png">
+				</a>
+			</li>
+			<!-- ExcelHome -->
+			<li>
+				<a href="http://www.excelhome.net/" target="_blank">
+					<img src="images/excelhome.gif">
+				</a>				
+			</li>  
+		</ul>
+	</div>
+</body>
+</html>
